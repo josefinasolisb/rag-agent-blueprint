@@ -111,3 +111,6 @@ uv run pytest
 MIT — see [`LICENSE`](LICENSE).
 
 Full architecture write-up: [`docs/architecture.md`](docs/architecture.md).
+
+
+## Built by: Josefina Solis
