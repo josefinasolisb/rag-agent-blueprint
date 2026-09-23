@@ -1,25 +1,25 @@
-# Manual: configuración de alertas de uso (producto ficticio "Nimbus")
+# Manual: configuring usage alerts (fictional product "Nimbus")
 
-> Documento de ejemplo, ficticio, escrito para este repositorio. No
-> corresponde a ningún producto real.
+> Example document, fictional, written for this repository. Does not
+> correspond to any real product.
 
-## Resumen
+## Overview
 
-Nimbus permite configurar alertas cuando el consumo de una cuenta supera
-un umbral definido por el usuario.
+Nimbus lets you configure alerts for when an account's usage crosses a
+threshold defined by the user.
 
-## Configurar una alerta
+## Setting up an alert
 
-1. Ir a **Configuración → Alertas**.
-2. Seleccionar la métrica a monitorear (uso de almacenamiento, llamadas a
-   la API, o usuarios activos).
-3. Definir el umbral y el canal de notificación (correo o webhook).
-4. Guardar. La alerta queda activa de inmediato.
+1. Go to **Settings → Alerts**.
+2. Select the metric to monitor (storage usage, API calls, or active
+   users).
+3. Define the threshold and the notification channel (email or webhook).
+4. Save. The alert is active immediately.
 
-## Preguntas frecuentes
+## FAQ
 
-**¿Puedo tener más de una alerta por métrica?** Sí, siempre que tengan
-umbrales distintos.
+**Can I have more than one alert per metric?** Yes, as long as they have
+different thresholds.
 
-**¿Las alertas se pueden pausar temporalmente?** Sí, desde el mismo panel,
-sin necesidad de eliminarlas.
+**Can alerts be paused temporarily?** Yes, from the same panel, without
+needing to delete them.

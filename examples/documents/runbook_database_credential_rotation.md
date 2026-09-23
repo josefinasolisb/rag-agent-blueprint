@@ -1,24 +1,24 @@
-# Runbook: rotación de una credencial de base de datos
+# Runbook: rotating a database credential
 
-> Documento de ejemplo, ficticio, escrito para este repositorio. No
-> corresponde a ningún sistema real.
+> Example document, fictional, written for this repository. Does not
+> correspond to any real system.
 
-## Cuándo aplica
+## When this applies
 
-Cuando una credencial de base de datos compartida cumple su ciclo de
-rotación programado o se sospecha que fue expuesta.
+When a shared database credential reaches its scheduled rotation cycle,
+or is suspected of having been exposed.
 
-## Pasos
+## Steps
 
-1. Generar una nueva credencial en el gestor de secretos.
-2. Desplegar la nueva credencial a los servicios consumidores, uno a la
-   vez, verificando healthcheck después de cada despliegue.
-3. Confirmar que no quedan conexiones activas usando la credencial vieja.
-4. Revocar la credencial anterior.
-5. Registrar la rotación en el log de auditoría del equipo.
+1. Generate a new credential in the secrets manager.
+2. Roll the new credential out to consuming services one at a time,
+   verifying the healthcheck after each rollout.
+3. Confirm no active connections still use the old credential.
+4. Revoke the previous credential.
+5. Log the rotation in the team's audit log.
 
 ## Rollback
 
-Si un servicio falla el healthcheck tras el paso 2, revertir ese
-servicio a la credencial anterior (todavía válida hasta el paso 4) y
-detener el rollout hasta investigar la causa.
+If a service fails its healthcheck after step 2, revert that service to
+the previous credential (still valid until step 4) and halt the rollout
+until the cause is investigated.

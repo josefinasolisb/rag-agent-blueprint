@@ -1,11 +1,11 @@
-# Datasets de eval
+# Eval datasets
 
-Carpeta destinada a casos de prueba **ficticios y curados a mano** para
-`tool_call_eval.py` y `judge_eval.py`. No debe contener trazas reales de
-usuarios ni datos de producción — solo ejemplos escritos para este
-repositorio, en el mismo espíritu que `examples/`.
+Folder for **fictional, hand-curated** test cases for `tool_call_eval.py`
+and `judge_eval.py`. Should never contain real user traces or production
+data — only examples written for this repository, in the same spirit as
+`examples/`.
 
-Formato esperado (a definir al implementar):
-- Un archivo por caso o un JSONL con una fila por turno.
-- Cada caso referencia un `turn_id`, un transcript ficticio, y (según el
-  eval) la tool esperada o la ruta a un rubric en `docs/`.
+Expected format (to be defined during implementation):
+- One file per case, or a JSONL file with one row per turn.
+- Each case references a `turn_id`, a fictional transcript, and (depending
+  on the eval) the expected tool or the path to a rubric under `docs/`.
