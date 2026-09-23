@@ -1,13 +1,27 @@
 [project]
-name = "josefina"
+name = "rag-agent-blueprint"
 version = "0.1.0"
-description = "Non-functional reference scaffold for a RAG multi-agent system: cascading ingestion, rule-based moderation, chunk/embed/index, an agent graph with mode routing and tools, a deterministic post-generation guardrail, and an evals harness."
+description = "Non-functional reference scaffold for a RAG multi-agent system on LangGraph, Postgres/pgvector, and an OpenAI-compatible API: cascading ingestion (PyMuPDF/Tesseract), rule-based moderation, chunk/embed/index, an agent graph with mode routing and tools, a deterministic post-generation guardrail, and an evals harness."
 readme = "README.md"
 requires-python = ">=3.11"
+dependencies = [
+    "langchain-core>=1.6.4",
+    "langgraph>=1.2.12",
+    "langgraph-checkpoint-postgres>=3.1.2",
+    "openai>=3.19.0",
+    "pgvector>=0.5.0",
+    "psycopg[binary]>=3.3.6",
+    "pymupdf>=1.28.2",
+    "pytesseract>=0.3.13",
+    "tiktoken>=0.14.0",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.0"]
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/josefina"]
+packages = ["src/rag_agent_blueprint"]
